@@ -17,9 +17,9 @@ public class JSMindTest {
     @Test
     public void parseForJSMind() {
         MvnRepoSourceParam param = new MvnRepoSourceParam();
-        param.setArtifactId("buz-dc-core-app");
-        param.setGroupId("com.buz");
-        param.setRepositoryUrl("http://maven.lizhi.fm:8081/nexus/content/repositories/snapshots");
+        param.setArtifactId("company-core-app");
+        param.setGroupId("com.company");
+        param.setRepositoryUrl("http://maven:8081/nexus/content/repositories/snapshots");
         param.setVersion("1.2.12-SNAPSHOT");
 
         GetCallJsMindEntry jsMindGeneration = new GetCallJsMindEntry(param);

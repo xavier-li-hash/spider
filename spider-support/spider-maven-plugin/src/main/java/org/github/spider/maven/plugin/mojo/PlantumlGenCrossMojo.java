@@ -91,7 +91,7 @@ public class PlantumlGenCrossMojo extends AbstractMojo {
 
     private void logInformation() {
 
-        // key的格式： fm.lizhi.ocean:lz-ocean-i18n-service-sdk
+        // key的格式： fm.company.ocean:lz-ocean-i18n-service-sdk
         Set<Artifact> artifacts = project.getArtifacts();
 
         // todo 完成api到provider的转换，然后解决跨项目的依赖，递归依赖的处理，可能需要考虑从flagjar的子文件入手
@@ -99,7 +99,7 @@ public class PlantumlGenCrossMojo extends AbstractMojo {
             getLog().info("Current dependency: " + artifact.getGroupId() + ":" + artifact.getArtifactId());
 
             // 判断并转换指定的依赖
-            if (artifact.getGroupId().contains("com.buz") && artifact.getArtifactId().endsWith("-api")) {
+            if (artifact.getGroupId().contains("com.company") && artifact.getArtifactId().endsWith("-api")) {
                 String newArtifactId = artifact.getArtifactId().replace("api", "provider");
 
                 // 转换依赖并下载

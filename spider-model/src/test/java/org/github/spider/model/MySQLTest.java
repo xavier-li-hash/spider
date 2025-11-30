@@ -22,16 +22,16 @@ public class MySQLTest {
         Predicate<ClassOrInterfaceDeclaration> extendsSpecificClass = MySQLParser::hasTableAnnotation;
 
         MvnRepoSourceParam param = new MvnRepoSourceParam();
-        param.setArtifactId("buz-dc-core-app");
-        param.setGroupId("com.buz");
-        param.setRepositoryUrl("http://maven.lizhi.fm:8081/nexus/content/repositories/snapshots");
+        param.setArtifactId("company-core-app");
+        param.setGroupId("com.company");
+        param.setRepositoryUrl("http://maven:8081/nexus/content/repositories/snapshots");
         param.setSnapshotTotal(3);
         param.setSnapshotEnv(true);
 
         MvnRepoSourceParam relation = new MvnRepoSourceParam();
-        relation.setArtifactId("buz-dc-relation-app");
-        relation.setGroupId("com.buz");
-        relation.setRepositoryUrl("http://maven.lizhi.fm:8081/nexus/content/repositories/snapshots");
+        relation.setArtifactId("company-relation-app");
+        relation.setGroupId("com.company");
+        relation.setRepositoryUrl("http://maven:8081/nexus/content/repositories/snapshots");
         relation.setSnapshotTotal(3);
         relation.setSnapshotEnv(true);
 

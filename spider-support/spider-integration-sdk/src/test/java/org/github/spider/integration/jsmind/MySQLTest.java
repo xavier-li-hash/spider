@@ -25,9 +25,9 @@ public class MySQLTest {
         Predicate<ClassOrInterfaceDeclaration> extendsSpecificClass = MySQLParser::hasTableAnnotation;
 
         MvnRepoSourceParam param = new MvnRepoSourceParam();
-        param.setArtifactId("buz-dc-core-app");
-        param.setGroupId("com.buz");
-        param.setRepositoryUrl("http://maven.lizhi.fm:8081/nexus/content/repositories/snapshots");
+        param.setArtifactId("company-core-app");
+        param.setGroupId("com.company");
+        param.setRepositoryUrl("http://maven:8081/nexus/content/repositories/snapshots");
         param.setSnapshotTotal(3);
         param.setSnapshotEnv(true);
         List<MvnRepoSourceParam> params = new ArrayList<>();
@@ -43,11 +43,11 @@ public class MySQLTest {
     public void test() {
         GetTableInfoEntry getTableInfoEntry = new GetTableInfoEntry();
         List<String> ids = new ArrayList<>();
-        ids.add("buz-dc-core-app");
-        ids.add("buz-dc-ai-app");
-        ids.add("buz-dc-relation-app");
-        List<DBTable> tables = getTableInfoEntry.listAllTable("http://maven.lizhi.fm:8081/nexus/content/repositories/snapshots",
-                ids, "com.buz");
+        ids.add("company-core-app");
+        ids.add("company-ai-app");
+        ids.add("company-relation-app");
+        List<DBTable> tables = getTableInfoEntry.listAllTable("http://maven:8081/nexus/content/repositories/snapshots",
+                ids, "com.company");
         for (DBTable table : tables) {
             System.out.println("-------------------------------------");
             System.out.println(table.getName());

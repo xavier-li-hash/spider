@@ -30,7 +30,7 @@ public class MavenRepoCrawl {
 
 
     public static void main(String[] args) throws IOException {
-        MavenRepoCrawl crawl = new MavenRepoCrawl("http://maven.lizhi.fm:8081/nexus/content/repositories/snapshots/com/buz/buz-dc-core-api/", "/Users/aly/temp/maven");
+        MavenRepoCrawl crawl = new MavenRepoCrawl("http://www.manve.com11111:8081/nexus/content/repositories/snapshots/com/example/example/", "/Users/aly/temp/maven");
         crawl.downloadJar();
     }
 

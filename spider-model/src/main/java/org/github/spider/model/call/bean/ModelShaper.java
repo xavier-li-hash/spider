@@ -187,8 +187,7 @@ public class ModelShaper {
         if (StringUtils.containsAnyIgnoreCase(laterName, "parallel")) {
             return true;
         }
-        if ((StringUtils.containsAnyIgnoreCase(priorName, "Runnable")
-                && StringUtils.containsAnyIgnoreCase(laterName, "BuzExecutor"))
+        if ((StringUtils.containsAnyIgnoreCase(priorName, "Runnable"))
                 || (StringUtils.containsAnyIgnoreCase(priorName, "Runnable")
                 && StringUtils.containsAnyIgnoreCase(laterName, "Thread"))
         ) {

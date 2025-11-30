@@ -38,15 +38,12 @@ public class CompilationCachedMetaCached implements MetaCachedHold {
         this.commandWeight.put("smembers", 3);
         this.commandWeight.put("zrevrangeByScore", 3);
 
-        this.redisClassNameList.add("fm.lizhi.common.datastore.redis.client");
         this.redisClassNameList.add("org.redisson.api");
         this.redisClassNameList.add("redis.clients.jedis");
 
         this.cacheAnnotationMap.put("com.alicp.jetcache.anno.CacheInvalidateContainer", 2);
-        this.cacheAnnotationMap.put("fm.lizhi.common.datastore.cache.annotation.Caching", 1);
-        this.cacheAnnotationMap.put("com.buz.common.mq.MqListener", 1);
+        this.cacheAnnotationMap.put("com.company.common.mq.MqListener", 1);
         this.cacheAnnotationMap.put("com.alicp.jetcache.anno.Cached", 1);
-        this.cacheAnnotationMap.put("fm.lizhi.common.datastore.cache.annotation.CacheEvict", 1);
         this.cacheAnnotationMap.put("com.alicp.jetcache.anno.CacheInvalidate", 1);
 
         // 解析方法注解

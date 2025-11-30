@@ -17,9 +17,9 @@ public class VersionTest {
     @Test
     public void getJarVersionUrl() {
         MvnRepoSourceParam param = new MvnRepoSourceParam();
-        param.setArtifactId("buz-dc-core-app");
-        param.setGroupId("com.buz");
-        param.setRepositoryUrl("http://maven.lizhi.fm:8081/nexus/content/repositories/snapshots");
+        param.setArtifactId("company-core-app");
+        param.setGroupId("com.company");
+        param.setRepositoryUrl("http://maven:8081/nexus/content/repositories/snapshots");
         param.setVersion("1.2.12-SNAPSHOT");
 
         String jar = MvnVersionDetection.getJarSourceUrl(param, FileTypeEnum.JAR);
@@ -31,16 +31,16 @@ public class VersionTest {
     @Test
     public void getLatestJarVersionUrl() {
         MvnRepoSourceParam param = new MvnRepoSourceParam();
-        param.setArtifactId("buz-dc-core-app");
-        param.setGroupId("com.buz");
-        param.setRepositoryUrl("http://maven.lizhi.fm:8081/nexus/content/repositories/snapshots");
+        param.setArtifactId("company-core-app");
+        param.setGroupId("com.company");
+        param.setRepositoryUrl("http://maven:8081/nexus/content/repositories/snapshots");
         param.setSnapshotTotal(3);
         param.setSnapshotEnv(true);
 
         MvnRepoSourceParam relation = new MvnRepoSourceParam();
-        relation.setArtifactId("buz-dc-relation-app");
-        relation.setGroupId("com.buz");
-        relation.setRepositoryUrl("http://maven.lizhi.fm:8081/nexus/content/repositories/snapshots");
+        relation.setArtifactId("company-relation-app");
+        relation.setGroupId("com.company");
+        relation.setRepositoryUrl("http://maven:8081/nexus/content/repositories/snapshots");
         relation.setSnapshotTotal(3);
         relation.setSnapshotEnv(true);
 
@@ -55,9 +55,9 @@ public class VersionTest {
     @Test
     public void listVersionDesc() {
         MvnRepoSourceParam param = new MvnRepoSourceParam();
-        param.setArtifactId("buz-dc-core-app");
-        param.setGroupId("com.buz");
-        param.setRepositoryUrl("http://maven.lizhi.fm:8081/nexus/content/repositories/snapshots");
+        param.setArtifactId("company-core-app");
+        param.setGroupId("com.company");
+        param.setRepositoryUrl("http://maven:8081/nexus/content/repositories/snapshots");
         param.setSnapshotTotal(3);
         param.setSnapshotEnv(true);
 
@@ -68,9 +68,9 @@ public class VersionTest {
     @Test
     public void listTop10VersionDesc() {
         MvnRepoSourceParam param = new MvnRepoSourceParam();
-        param.setArtifactId("buz-dc-core-app");
-        param.setGroupId("com.buz");
-        param.setRepositoryUrl("http://maven.lizhi.fm:8081/nexus/content/repositories/snapshots");
+        param.setArtifactId("company-core-app");
+        param.setGroupId("com.company");
+        param.setRepositoryUrl("http://maven:8081/nexus/content/repositories/snapshots");
         param.setSnapshotTotal(3);
         param.setSnapshotEnv(true);
 
@@ -81,9 +81,9 @@ public class VersionTest {
     @Test
     public void listVersionAddress() {
         MvnRepoSourceParam param = new MvnRepoSourceParam();
-        param.setArtifactId("buz-dc-core-app");
-        param.setGroupId("com.buz");
-        param.setRepositoryUrl("http://maven.lizhi.fm:8081/nexus/content/repositories/snapshots");
+        param.setArtifactId("company-core-app");
+        param.setGroupId("com.company");
+        param.setRepositoryUrl("http://maven:8081/nexus/content/repositories/snapshots");
         param.setSnapshotTotal(3);
         param.setSnapshotEnv(true);
 

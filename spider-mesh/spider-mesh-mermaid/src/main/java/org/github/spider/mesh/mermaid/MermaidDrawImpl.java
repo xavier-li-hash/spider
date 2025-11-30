@@ -98,7 +98,7 @@ public class MermaidDrawImpl implements ICallDrawAble {
     }
 
     private String trim(String name) {
-        return name.replace("com.buz.dc.core.", "");
+        return name.replace("com.example.dc.core.", "");
     }
 
     public int getAsyncCacheCount() {

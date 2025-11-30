@@ -103,7 +103,7 @@ public class JavaGraphPlantumlDrawImpl implements ICallDrawAble {
     }
 
     private String trim(String name) {
-        return name.replace("com.buz.dc.core.", "");
+        return name.replace("com.company.dc.core.", "");
     }
 
     public int getAsyncCacheCount() {

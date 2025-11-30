@@ -64,8 +64,8 @@ public class MethodParserTools {
     }
 
     public static void main(String[] args) {
-        String callerStr = "com.buz.dc.core.manager.popwindow.filter.FilterCondition:setComparisonOperator(java.lang.String)";
-        String calleeStr = "(_ITF)com.buz.dc.core.manager.popwindow.filter.RegisterDayFilter:setComparisonOperator(java.lang.String)";
+        String callerStr = "com.company.dc.core.manager.popwindow.filter.FilterCondition:setComparisonOperator(java.lang.String)";
+        String calleeStr = "(_ITF)com.company.dc.core.manager.popwindow.filter.RegisterDayFilter:setComparisonOperator(java.lang.String)";
         Caller caller = parseCaller(callerStr);
 //        Callee callee = parseCallee(calleeStr);
 
@@ -74,7 +74,7 @@ public class MethodParserTools {
 
 //        System.out.println("noBracket:" + replaceBracket(callee.getFullName()));
 
-        String line = "30327\tcom.buz.dc.core.infrastructure.redis.CommonRedisHandle:updateResendEmailCode(java.lang.String,com.buz.dc.core.entity.bo.login.EmailCodeParams)\t(INT)fm.lizhi.common.datastore.redis.client.RedisClient:setex(java.lang.String,int,java.lang.String)\t71\tvoid\tf\tjava.lang.String\t2\t-\n";
+        String line = "30327\tcom.company.dc.core.infrastructure.redis.CommonRedisHandle:updateResendEmailCode(java.lang.String,com.company.dc.core.entity.bo.login.EmailCodeParams)\t(INT)fm.company.common.datastore.redis.client.RedisClient:setex(java.lang.String,int,java.lang.String)\t71\tvoid\tf\tjava.lang.String\t2\t-\n";
         String[] split = line.split("\t");
 
         System.out.println("part.len=" + split.length);

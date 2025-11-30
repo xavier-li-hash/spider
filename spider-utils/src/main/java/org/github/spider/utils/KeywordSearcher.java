@@ -79,7 +79,7 @@ public class KeywordSearcher {
 
     // 示例用法
     public static void main(String[] args) {
-        Path dir = Paths.get("/Users/aly/IdeaProjects/buz/buz-dc-core/buz-dc-core-app/target/buz-dc-core-app-1.2.20-SNAPSHOT.jar-javacg_merged.jar-output_javacg/");
+        Path dir = Paths.get("/Users/aly/IdeaProjects/company/company-core/company-core-app/target/company-core-app-1.2.20-SNAPSHOT.jar-javacg_merged.jar-output_javacg/");
         String keyword = "SimpleUserInfo"; // 替换为你的关键词
         Map<Path, List<String>> result = searchLineDirectory(dir, keyword);
         for (Map.Entry<Path, List<String>> pathListEntry : result.entrySet()) {
