@@ -12,8 +12,7 @@ public class UnzipJarUtils {
 
     public static void main(String[] args) throws IOException {
 
-        // unzipJar("/Users/lixiaoying/temp/bianque/idl-Tiya-1.0.10-20220621.075908-1-sources", "/Users/lixiaoying/temp/bianque/idl-Tiya-1.0.10-20220621.075908-1-sources.jar");
-        unzipJar("/Users/lixiaoying/temp/bianque/idl-vopi-0.0.1-20210830.110931-4-sources", "/Users/lixiaoying/temp/bianque/idl-vopi-0.0.1-20210830.110931-4-sources.jar");
+        unzipJar("idl-vopi-0.0.1-20210830.110931-4-sources", "idl-vopi-0.0.1-20210830.110931-4-sources.jar");
 
     }
 

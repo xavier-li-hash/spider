@@ -14,19 +14,17 @@ public class DBPlantumlTest {
 
     public static void main(String[] args) {
         List<String> ids = new ArrayList<>();
-        ids.add("buz-dc-core-app");
-        ids.add("buz-dc-ai-app");
-        ids.add("buz-dc-relation-app");
+        ids.add("项目名称");
 
         List<MvnRepoSourceParam> params = new ArrayList<>();
         for (String artifactId : ids) {
             MvnRepoSourceParam param = new MvnRepoSourceParam();
             param.setArtifactId(artifactId);
-            param.setGroupId("com.buz");
-            param.setRepositoryUrl("http://maven.lizhi.fm:8081/nexus/content/repositories/snapshots");
+            param.setGroupId("com.xxxx");
+            param.setRepositoryUrl("http://maven地址/nexus/content/repositories/snapshots");
             params.add(param);
         }
-        DBPlantumlGeneration generation = new DBPlantumlGeneration("/Users/aly/temp/spider/database", params);
+        DBPlantumlGeneration generation = new DBPlantumlGeneration("/Users/你的账户/temp/spider/database", params);
         generation.generate();
     }
 

@@ -17,11 +17,10 @@ public class GenerateTest {
     @Test
     public void testDcCodeApp() {
 
-//        /Users/aly/IdeaProjects/buz/buz-ps-web-common-growth-engine/target/buz-ps-web-common-growth-engine-1.0.0-SNAPSHOT.jar
         JavaGraphPlantumlGeneration plantUmlGeneration = new JavaGraphPlantumlGeneration(
-                "/Users/aly/IdeaProjects/buz/buz-dc-core/buz-dc-core-app/target/",
-                Arrays.asList("/Users/aly/IdeaProjects/buz/buz-dc-core/buz-dc-core-app/target/buz-dc-core-app-1.2.20-SNAPSHOT.jar",
-                        "/Users/aly/IdeaProjects/buz/buz-dc-core/buz-dc-core-api/target/buz-dc-core-api-1.2.20-SNAPSHOT.jar"));
+                "输出目录",
+                Arrays.asList("jar路径3",
+                        "jar路径2"));
         CallMeshRule meshRule = new CallMeshRule();
         Set<String> inConditions = new HashSet<>();
         inConditions.add("SimpleUserInfo");
@@ -32,9 +31,8 @@ public class GenerateTest {
     @Test
     public void testPushEngineApp() {
 
-//        /Users/aly/IdeaProjects/buz/buz-ps-web-common-growth-engine/target/buz-ps-web-common-growth-engine-1.0.0-SNAPSHOT.jar
 
-        JavaGraphPlantumlGeneration plantUmlGeneration = new JavaGraphPlantumlGeneration("/Users/aly/IdeaProjects/buz/buz-ps-web-common-growth-engine/target/", "buz-ps-web-common-growth-engine-1.0.0-SNAPSHOT.jar");
+        JavaGraphPlantumlGeneration plantUmlGeneration = new JavaGraphPlantumlGeneration("。。/target/", "xxxxx-1.0.0-SNAPSHOT.jar");
         CallMeshRule meshRule = new CallMeshRule();
         Set<String> inConditions = new HashSet<>();
 //        inConditions.add("ContactShardingDAOImpl:deleteAll");
@@ -45,10 +43,9 @@ public class GenerateTest {
 
     @Test
     public void testDcAIApp() {
-        JavaGraphPlantumlGeneration plantUmlGeneration = new JavaGraphPlantumlGeneration("/Users/aly/IdeaProjects/buz-dc-ai/buz-dc-ai-app/target", "buz-dc-ai-app-1.0.4.jar");
+        JavaGraphPlantumlGeneration plantUmlGeneration = new JavaGraphPlantumlGeneration("xxxxx target", "xxxxx-1.0.4.jar");
         CallMeshRule meshRule = new CallMeshRule();
         Set<String> inConditions = new HashSet<>();
-//        inConditions.add("ContactShardingDAOImpl:deleteAll");
         meshRule.setInConditions(inConditions);
         plantUmlGeneration.generate(meshRule);
     }
