@@ -1,0 +1,35 @@
+package org.github.spider.material.compilation.dto.element.variable;
+
+import org.github.spider.material.compilation.dto.element.BaseElement;
+
+/**
+ * @description: 静态字段
+ */
+public class StaticFieldElement extends FieldElement {
+
+    public StaticFieldElement(String type, boolean arrayElement, Object value, String variableName, String className) {
+        super(type, arrayElement, value, variableName, className);
+    }
+
+    public StaticFieldElement(String type, boolean arrayElement, Object value, int index, String variableName, String className) {
+        super(type, arrayElement, value, index, variableName, className);
+    }
+
+    @Override
+    public BaseElement copyElement() {
+        StaticFieldElement staticFieldElementCopy = new StaticFieldElement(getType(), arrayElement, value, getIndex(), getName(), className);
+        staticFieldElementCopy.copyVariableDataSource(this);
+        return staticFieldElementCopy;
+    }
+
+    @Override
+    public String toString() {
+        return "StaticFieldElement{" +
+                "simpleClassName='" + simpleClassName + '\'' +
+                ", type='" + getType() + '\'' +
+                ", value=" + value +
+                ", name='" + getName() + '\'' +
+                ", className='" + className + '\'' +
+                '}' + String.format(" (%x)", System.identityHashCode(this));
+    }
+}

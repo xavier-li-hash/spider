@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.github.spider</groupId>
+    <artifactId>spider</artifactId>
+    <version>1.0.3-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>spider-mesh</module>
+        <module>spider-material</module>
+        <module>spider-utils</module>
+        <module>spider-model</module>
+        <module>spider-support</module>
+        <module>spider-integrate-vb</module>
+        <module>spider-support/spider-integration-sdk</module>
+    </modules>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <maven-compiler-plugin.version>3.2</maven-compiler-plugin.version>
+        <maven-source-plugin.version>2.4</maven-source-plugin.version>
+        <maven-jar-plugin.version>3.2.0</maven-jar-plugin.version>
+        <maven-assembly-plugin.version>2.2.1</maven-assembly-plugin.version>
+        <maven-shade-plugin.version>2.4.1</maven-shade-plugin.version>
+        <maven.version>3.8.1</maven.version>
+        <logback.version>1.1.2</logback.version>
+
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>5.8.5</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>1.15</version>
+            </dependency>
+
+            <!--6.7.0版本LDC.getValue()会报错，不使用-->
+            <dependency>
+                <groupId>org.apache.bcel</groupId>
+                <artifactId>bcel</artifactId>
+                <version>6.6.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>net.lingala.zip4j</groupId>
+                <artifactId>zip4j</artifactId>
+                <version>2.11.5</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>1.7.36</version>
+            </dependency>
+
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.13.2</version>
+            </dependency>
+
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-core</artifactId>
+                <version>${logback.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>${logback.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-access</artifactId>
+                <version>${logback.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>3.12.0</version>
+            </dependency>
+            <dependency>
+                <groupId>net.sourceforge.plantuml</groupId>
+                <artifactId>plantuml</artifactId>
+                <version>1.2024.1</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.xmlgraphics</groupId>
+                <artifactId>batik-transcoder</artifactId>
+                <version>1.17</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.xmlgraphics</groupId>
+                <artifactId>batik-codec</artifactId>
+                <version>1.17</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.16.22</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jsoup</groupId>
+                <artifactId>jsoup</artifactId>
+                <version>1.14.1</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <repositories>
+        <repository>
+            <id>central</id>
+            <name>Central</name>
+            <url>http://maven.lizhi.fm:8081/nexus/content/groups/public/</url>
+        </repository>
+        <repository>
+            <id>codehaus-snapshots</id>
+            <name>Codehaus Snapshots</name>
+            <url>http://maven.lizhi.fm:8081/nexus/content/groups/public/</url>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>central</id>
+            <name>Maven Plugin Repository</name>
+            <url>http://maven.lizhi.fm:8081/nexus/content/groups/public/</url>
+            <layout>default</layout>
+            <snapshots>
+            </snapshots>
+            <releases>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <distributionManagement>
+        <repository>
+            <id>release</id>
+            <url>http://maven.lizhi.fm:8081/nexus/content/repositories/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <url>http://maven.lizhi.fm:8081/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+</project>

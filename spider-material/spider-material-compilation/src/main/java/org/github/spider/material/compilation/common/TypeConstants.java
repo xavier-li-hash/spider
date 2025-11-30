@@ -1,0 +1,26 @@
+package org.github.spider.material.compilation.common;
+
+import org.apache.bcel.Const;
+import org.github.spider.material.compilation.common.enums.JavaCGConstantTypeEnum;
+
+/**
+ * @description:
+ */
+public class TypeConstants {
+    // 与int兼容的类型
+    public static final String[] COMPATIBLE_INT_TYPES = new String[]{
+            JavaCGConstantTypeEnum.CONSTTE_BOOLEAN.getType(),
+            JavaCGConstantTypeEnum.CONSTTE_BYTE.getType(),
+            JavaCGConstantTypeEnum.CONSTTE_SHORT.getType(),
+            JavaCGConstantTypeEnum.CONSTTE_CHAR.getType(),
+    };
+
+    public static final String BYTE_ARRAY_TYPE = JavaCGConstantTypeEnum.CONSTTE_BYTE.getType() + JavaCGConstants.FLAG_ARRAY;
+    public static final String BOOLEAN_ARRAY_TYPE = JavaCGConstantTypeEnum.CONSTTE_BOOLEAN.getType() + JavaCGConstants.FLAG_ARRAY;
+
+    public static final short[] GOTO_OPCODES = new short[]{Const.GOTO, Const.GOTO_W};
+
+    private TypeConstants() {
+        throw new IllegalStateException("illegal");
+    }
+}

@@ -1,0 +1,93 @@
+package org.github.spider.material.compilation.dto.stack;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * @description: 當作棧使用的List
+ */
+public class ListAsStack<E> {
+    private final List<E> list = new ArrayList<>();
+    // 栈的当前位置，初始值-1
+    private int head = -1;
+
+    /**
+     * 出棧
+     *
+     * @return
+     */
+    public E pop() {
+        E element = list.get(head);
+        head--;
+        return element;
+    }
+
+    /**
+     * 删除栈顶元素
+     */
+    public void removeTop() {
+        head--;
+    }
+
+    /**
+     * 獲取棧頂元素
+     *
+     * @return
+     */
+    public E peek() {
+        return list.get(head);
+    }
+
+    /**
+     * 入棧
+     *
+     * @param element
+     */
+    public void push(E element) {
+        head++;
+        if (head >= list.size()) {
+            // head对应的记录不存在，则添加
+            list.add(element);
+        } else {
+            // head对应的记录已存在，则设置
+            list.set(head, element);
+        }
+    }
+
+    /**
+     * 获取指定下标的元素
+     *
+     * @param index
+     * @return
+     */
+    public E getElementAt(int index) {
+        return list.get(index);
+    }
+
+    /**
+     * 判断栈是否为空
+     *
+     * @return
+     */
+    public boolean isEmpty() {
+        return head < 0;
+    }
+
+    /**
+     * 判断栈是否处在最下面的位置（有一个元素）
+     *
+     * @return
+     */
+    public boolean atBottom() {
+        return head == 0;
+    }
+
+    /**
+     * 获取头的位置
+     *
+     * @return
+     */
+    public int getHead() {
+        return head;
+    }
+}
